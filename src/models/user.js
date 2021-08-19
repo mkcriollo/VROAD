@@ -41,24 +41,26 @@ userSchema.pre("save", function (next) {
 });
 
 userSchema.methods.comparePasswords = function (enterPassword) {
-  return bcrypt.compareSync(this.password, enterPassword);
+  const Match = bcrypt.compareSync(enterPassword, this.password);
+  if (Match) return true;
+  return false;
 };
 
-userSchema.statics.findByCredentials = async (email, password) => {
-  const user = await User.findOne({ email: email });
+// userSchema.statics.findByCredentials = async (email, password) => {
+//   const user = await User.findOne({ email: email });
 
-  if (!user) {
-    throw new Error("Unable to find user");
-  }
+//   if (!user) {
+//     throw new Error("Unable to find user");
+//   }
 
-  const isMatch = bcrypt.compareSync(password, user.password);
+//   const isMatch = bcrypt.compareSync(password, user.password);
 
-  if (!isMatch) {
-    throw new Error("Password is not a match");
-  }
+//   if (!isMatch) {
+//     throw new Error("Password is not a match");
+//   }
 
-  return user;
-};
+//   return user;
+// };
 
 const User = mongoose.model("User", userSchema);
 

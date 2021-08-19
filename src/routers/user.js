@@ -21,13 +21,17 @@ router.post("/users/signup", async (req, res) => {
 // Login User
 router.post("/users/login", async (req, res) => {
   try {
-    const user = await User.findByCredentials(
-      req.body.email,
-      req.body.password
-    );
+    const user = await User.findOne({ email: req.body.email });
+    if (!user) {
+      return res.status(400).send({ message: "Email does not exist" });
+    }
+    const isMatch = user.comparePasswords(req.body.password);
+    if (!isMatch) {
+      return res.status(400).send({ message: "Password is incorrect" });
+    }
     res.send({ user });
   } catch (e) {
-    res.status(400).send();
+    res.status(500).send();
   }
 });
 
