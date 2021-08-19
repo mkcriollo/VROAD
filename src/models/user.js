@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
+const bcrypt = require("bcryptjs");
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -31,11 +32,29 @@ const userSchema = new mongoose.Schema({
   },
 });
 
+userSchema.pre("save", function (next) {
+  if (!this.isModified("password")) {
+    return next();
+  }
+  this.password = bcrypt.hashSync(this.password, 10);
+  next();
+});
+
+userSchema.methods.comparePasswords = function (enterPassword) {
+  return bcrypt.compareSync(this.password, enterPassword);
+};
+
 userSchema.statics.findByCredentials = async (email, password) => {
   const user = await User.findOne({ email: email });
 
   if (!user) {
     throw new Error("Unable to find user");
+  }
+
+  const isMatch = bcrypt.compareSync(password, user.password);
+
+  if (!isMatch) {
+    throw new Error("Password is not a match");
   }
 
   return user;
