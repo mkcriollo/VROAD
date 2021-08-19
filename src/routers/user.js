@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const User = require("../models/user");
 
 // get all users
 router.get("/users", (req, res) => {
@@ -7,8 +8,14 @@ router.get("/users", (req, res) => {
 });
 
 // Signup User
-router.post("/users/signup", (req, res) => {
-  res.send("worked");
+router.post("/users/signup", async (req, res) => {
+  const user = new User(req.body);
+  try {
+    await user.save();
+    res.status(500).send(user);
+  } catch (e) {
+    res.status(404).send(e);
+  }
 });
 
 // Login User

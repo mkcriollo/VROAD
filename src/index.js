@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+require("./db/mongoose");
 const userRoutes = require("./routers/user");
 
 // will parse incoming req with json payload (1st place)
