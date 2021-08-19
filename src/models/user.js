@@ -46,6 +46,8 @@ userSchema.methods.comparePasswords = function (enterPassword) {
   return false;
 };
 
+// Static is use for not instance but for models
+
 // userSchema.statics.findByCredentials = async (email, password) => {
 //   const user = await User.findOne({ email: email });
 

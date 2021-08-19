@@ -41,8 +41,18 @@ router.post("/users/logout", (req, res) => {
 });
 
 // get one user
-router.get("/users/:id", (req, res) => {
-  res.send("worked");
+router.get("/users/:id", async (req, res) => {
+  // place id outside or it will fail since it will fail inside the try and run the catch with the error saying object id is not found
+  const _id = req.params.id;
+  try {
+    const user = await User.findById(_id);
+    if (!user) {
+      return res.status(400).send({ message: "User not found" });
+    }
+    res.send(user);
+  } catch (e) {
+    res.status(500).send();
+  }
 });
 
 // Edit user
