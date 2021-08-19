@@ -3,8 +3,13 @@ const router = express.Router();
 const User = require("../models/user");
 
 // get all users
-router.get("/users", (req, res) => {
-  res.send("worked");
+router.get("/users", async (req, res) => {
+  try {
+    const users = await User.find({});
+    res.send(users);
+  } catch (e) {
+    res.status(500).send(e);
+  }
 });
 
 // Signup User
@@ -56,6 +61,10 @@ router.get("/users/:id", async (req, res) => {
 });
 
 // Edit user
+// steps
+// 1) get the user you want to edit
+// 2) find if the thing you want to edit exist if so edit
+// 3) if both fail above send errors if successful send a message or user with updated info
 router.patch("/users/:id", (req, res) => {
   res.send("worked");
 });

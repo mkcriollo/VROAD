@@ -66,4 +66,7 @@ userSchema.methods.comparePasswords = function (enterPassword) {
 
 const User = mongoose.model("User", userSchema);
 
+// model is wrapper of schema / used to interact with database / creating,querying,deleting,updating
+// schema defines a structure of the document / default values, validators etc
+
 module.exports = User;
