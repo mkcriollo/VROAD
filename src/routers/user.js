@@ -12,15 +12,23 @@ router.post("/users/signup", async (req, res) => {
   const user = new User(req.body);
   try {
     await user.save();
-    res.status(500).send(user);
+    res.status(201).send(user);
   } catch (e) {
     res.status(404).send(e);
   }
 });
 
 // Login User
-router.post("/users/login", (req, res) => {
-  res.send("worked");
+router.post("/users/login", async (req, res) => {
+  try {
+    const user = await User.findByCredentials(
+      req.body.email,
+      req.body.password
+    );
+    res.send({ user });
+  } catch (e) {
+    res.status(400).send();
+  }
 });
 
 // Logout User

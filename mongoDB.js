@@ -14,8 +14,3 @@ MongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
   const db = client.db(dbName);
   console.log("Running MongoDB");
 });
-
-// Note for tomorrow
-
-// Figure out why mongodb server wont connect
-// start creating models and authentication
