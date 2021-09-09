@@ -60,16 +60,46 @@ router.get("/users/:id", async (req, res) => {
   }
 });
 
-// Edit user
-// steps
-// 1) get the user you want to edit
-// 2) find if the thing you want to edit exist if so edit
-// 3) if both fail above send errors if successful send a message or user with updated info
-router.patch("/users/:id", (req, res) => {
-  res.send("worked");
+router.patch("/users/:id", async (req, res) => {
+  const _id = req.params.id;
+  const updates = Object.keys(req.body);
+  const validInputs = ["name", "email", "password"];
+  // checks if all updates are valid inputs
+  const isValid = updates.every((key) => {
+    return validInputs.includes(key);
+  });
+  // if not it send a message saying you can update
+  if (!isValid) {
+    res.status(404).send({ message: "Invalid Updates!" });
+  }
+  try {
+    const user = await User.findById(_id);
+    if (!user) {
+      return res.status(404).send({ message: "User not found" });
+    }
+    // get all update and update the user with that updates new value
+    updates.forEach((update) => {
+      user[update] = req.body[update];
+    });
+    await user.save();
+    res.send(user);
+  } catch (e) {
+    res.status(500).send(e);
+  }
 });
 
-// NOTE
+router.delete("/users/:id", async (req, res) => {
+  const _id = req.params.id;
+  try {
+    const user = await User.findByIdAndDelete(_id);
+    console.log(user);
+    if (!user) {
+      return res.status(404).send({ message: "No User Found" });
+    }
+    res.status(200).send();
+  } catch (e) {
+    res.status(500).send(e);
+  }
+});
 
-// figure out why the route signup is not getting a res back
 module.exports = router;
