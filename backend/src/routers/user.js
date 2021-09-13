@@ -103,3 +103,14 @@ router.delete("/users/:id", async (req, res) => {
 });
 
 module.exports = router;
+
+// Problems
+
+/*
+- when updating a user if the password is not being updated it will return the original password not the password pass into bcrypt 
+
+
+
+
+
+*/

@@ -1,0 +1,75 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+.full-navbar {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #f2f2f2;
+}
+
+.full-navbar > h2 {
+  color: #333;
+}
+
+.details-nav-holder {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.details-nav-holder > i {
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+}
+
+.holder-message-nav {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.holder-message-nav > p {
+  color: #333;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#change-words {
+  color: #a64ac9;
+  margin-left: 10px;
+}
+
+.login-btn {
+  width: 180px;
+  height: 60%;
+  background-color: black;
+  color: #f2f2f2;
+  border-radius: 15px;
+  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+  margin-right: 20px;
+}
