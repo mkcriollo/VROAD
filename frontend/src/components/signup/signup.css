@@ -1,0 +1,158 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+}
+
+.full-page-su {
+  width: 100vw;
+  height: 800px;
+  position: relative;
+}
+
+.top-su {
+  width: 100%;
+  height: 80%;
+  background-color: #020b4a;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bottom-su {
+  width: 100%;
+  height: 20%;
+}
+
+.app-example {
+  background-image: url("../../assests/app-example.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 750px;
+  height: 450px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  border-radius: 3%;
+  transform: translate(-50%, -50%);
+}
+
+.top-su > h2 {
+  font-size: 40px;
+  color: #fff;
+}
+
+.top-su > p {
+  font-size: 15px;
+  color: #fff;
+}
+
+.goal-input {
+  margin-top: 10px;
+}
+
+.goal-input > input {
+  width: 300px;
+  height: 20px;
+  background-color: #02072f;
+  padding: 10px;
+  color: #fff;
+  border: none;
+}
+
+.goal-input > button {
+  height: 40px;
+  width: 100px;
+  padding: 10px;
+  background-color: #7d88c7;
+  border: none;
+  color: #fff;
+}
+
+/* info page css */
+
+.info-page {
+  width: 100vw;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.fa-grip-lines-vertical {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  top: 0;
+  font-size: 50px;
+  color: #7d88c7;
+}
+
+.info-holder {
+  background-color: #7d88c7;
+  width: 80%;
+  height: 80%;
+  display: flex;
+}
+
+.left-info {
+  width: 32%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.left-info > h2 {
+  line-height: 1px;
+  margin-left: 50px;
+}
+
+.left-info > h2:first-child {
+  color: #fff;
+}
+
+.image-slide-holder {
+  width: 36%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-slide-01 {
+  background-image: url("../../assests/inspire-cartoon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 90%;
+  height: 50%;
+}
+
+.right-info {
+  width: 32%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.right-info > p {
+  font-size: 12px;
+  color: #fff;
+  margin-left: 50px;
+}

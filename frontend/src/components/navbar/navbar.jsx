@@ -1,6 +1,5 @@
 import React from "react";
 import "./navbar.css";
-import profile from "../../assests/Men-Profile-Image-PNG.png";
 
 let counter = 0;
 let changeWord = document.getElementById("change-words");
