@@ -101,10 +101,15 @@ p {
   color: #7d88c7;
 }
 
-.info-holder {
-  background-color: #7d88c7;
+.slideshow-container {
   width: 80%;
   height: 80%;
+  position: relative;
+}
+
+.info-holder {
+  background-color: #7d88c7;
+  height: 100%;
   display: flex;
 }
 
@@ -155,4 +160,82 @@ p {
   font-size: 12px;
   color: #fff;
   margin-left: 50px;
+}
+.info-holder2 {
+  background-color: #fbb6c1;
+  height: 100%;
+  display: flex;
+}
+.image-slide-02 {
+  background-image: url("../../assests/think-goal.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 90%;
+  height: 50%;
+}
+
+.info-holder3 {
+  background-color: #020b4a;
+  height: 100%;
+  display: flex;
+}
+
+.image-slide-03 {
+  background-image: url("../../assests/Group-community.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 90%;
+  height: 50%;
+}
+
+.image-slide-03 h2 {
+  color: #fff;
+}
+
+.left-info3 {
+  width: 32%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.left-info3 > h2 {
+  line-height: 1px;
+  margin-left: 50px;
+  color: #fff;
+}
+
+/* slide show */
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mySlides {
+  height: 100%;
+  width: 100%;
+  display: none;
 }
