@@ -91,6 +91,62 @@ const Signup = () => {
           </div>
         </div>
       </div>
+      <div className="features-full-page">
+        <h2>VROAD IS FULL OF GREAT FEATURES</h2>
+        <div className="feature-holder">
+          <div className="feature-left">
+            <div className="FL-upper">
+              <i class="fas fa-bullseye"></i>
+              <h2>SET ALL YOUR GOALS</h2>
+              <p>
+                JOT DOWN SHORT TERMS OR LONG TERM GOALS, THE GOAL IS TO ACHIEVE
+                THEM.
+              </p>
+            </div>
+            <div className="FL-bottom">
+              <i class="fas fa-project-diagram"></i>
+              <h2>TRACK ALL PROJECTS</h2>
+              <p>
+                KEEP TRACK OF THE STATUS OF YOUR CURRENT PROJECTS, TAKE NOTES
+                AND SEE YOUR PROFOLIO GROW.
+              </p>
+            </div>
+          </div>
+          <div className="feature-mid">
+            <div className="FM-upper">
+              <i class="fas fa-book"></i>
+              <h2>WRITE YOUR STORIES</h2>
+              <p>
+                JUST LIKE BOOKS EVERY PART OF YOUR LIFE HAS CHAPTERS, WHEN
+                INSPIRED WRITE IT DOWN.
+              </p>
+            </div>
+            <div className="FM-bottom">
+              <i class="fas fa-tasks"></i>
+              <h2>COMPLETE TASKS</h2>
+              <p>
+                JOT DOWN TASK DAILY, MONTHLY,YEARLY. MARK COMPLETE WHEN
+                FINISHED.
+              </p>
+            </div>
+          </div>
+          <div className="feature-right">
+            <div className="FR-upper">
+              <i class="fas fa-link"></i>
+              <h2>YOUR LINKS IN ONE PLACE</h2>
+              <p>ONE PLACE TO NAVIGATE TO EVERYTHING ABOUT YOU.</p>
+            </div>
+            <div className="FR-bottom">
+              <i class="far fa-address-card"></i>
+              <h2>SHARE YOUR HABITS</h2>
+              <p>
+                INSPIRE OTHERS TO FOLLOW YOUR HABITS. DISCOVER NEW METHODS THAT
+                IMPROVE YOURS.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

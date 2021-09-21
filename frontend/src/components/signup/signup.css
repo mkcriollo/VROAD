@@ -8,10 +8,14 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
+h6 {
   font-family: "Archivo", sans-serif;
   font-weight: 500;
+}
+
+p {
+  font-family: "Archivo", sans-serif;
+  font-weight: 100;
 }
 
 .full-page-su {
@@ -211,9 +215,9 @@ p {
 
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 2s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
 }
 
 @-webkit-keyframes fade {
@@ -238,4 +242,220 @@ p {
   height: 100%;
   width: 100%;
   display: none;
+}
+
+/* features page */
+
+.features-full-page {
+  width: 100vw;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.features-full-page > h2 {
+  font-weight: bolder;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.feature-holder {
+  width: 80%;
+  height: 500px;
+  background-color: #fff;
+  display: flex;
+}
+
+.feature-left {
+  width: 33%;
+  height: 100%;
+}
+
+.feature-mid {
+  height: 100%;
+  width: auto;
+}
+
+.feature-right {
+  width: 33%;
+  height: 100%;
+}
+
+/* LEFT */
+
+.FL-upper {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.FL-bottom {
+  width: 100%;
+  height: 50%;
+  display: flex;
+}
+
+.fa-bullseye {
+  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  color: #7d88c7;
+}
+
+.FL-upper > h2 {
+  color: black;
+  font-weight: 900;
+}
+
+.FL-upper > p {
+  color: black;
+  font-size: 12px;
+  font-weight: 100;
+  width: 60%;
+  word-wrap: break-word;
+}
+
+.FL-bottom {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-project-diagram {
+  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  color: #7d88c7;
+}
+
+.FL-bottom > h2 {
+  color: black;
+}
+
+.FL-bottom > p {
+  color: black;
+  font-size: 12px;
+  width: 60%;
+  word-wrap: break-word;
+}
+
+/* MID */
+
+.FM-upper {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-book {
+  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  color: #7d88c7;
+}
+
+.FM-upper > h2 {
+  color: black;
+}
+
+.FM-upper > p {
+  color: black;
+  font-size: 12px;
+  width: 60%;
+  word-wrap: break-word;
+}
+
+.FM-bottom {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-tasks {
+  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  color: #7d88c7;
+}
+
+.FM-bottom > h2 {
+  color: black;
+}
+
+.FM-bottom > p {
+  color: black;
+  font-size: 12px;
+  width: 60%;
+  word-wrap: break-word;
+}
+
+/* RIGHT */
+
+.FR-upper {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-link {
+  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  color: #7d88c7;
+}
+
+.FR-upper > h2 {
+  color: BLACK;
+}
+
+.FR-upper > p {
+  color: BLACK;
+
+  font-size: 12px;
+  width: 60%;
+  word-wrap: break-word;
+}
+
+.FR-bottom {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-address-card {
+  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  color: #7d88c7;
+}
+
+.FR-bottom > h2 {
+  color: black;
+}
+
+.FR-bottom > p {
+  color: black;
+  font-size: 12px;
+  width: 60%;
+  word-wrap: break-word;
 }
