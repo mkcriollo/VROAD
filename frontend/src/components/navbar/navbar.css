@@ -25,6 +25,7 @@ body {
 
 .full-navbar > h2 {
   color: #333;
+  font-weight: 900;
 }
 
 .details-nav-holder {
@@ -55,21 +56,20 @@ body {
 }
 
 #change-words {
-  color: #a64ac9;
+  color: #020b4a;
   margin-left: 10px;
 }
 
 .login-btn {
   width: 180px;
-  height: 60%;
-  background-color: black;
-  color: #f2f2f2;
-  border-radius: 15px;
+  height: 52px;
+  background-color: #7d88c7;
+  color: white;
+  border: none;
   letter-spacing: 2px;
   font-size: 10px;
   font-weight: 700;
   cursor: pointer;
   font-family: "Archivo", sans-serif;
   font-weight: 500;
-  margin-right: 20px;
 }

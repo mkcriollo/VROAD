@@ -1,7 +1,9 @@
 import React from "react";
 import SignUp from "./components/signup/signup";
 import NavBar from "./components/navbar/navbar";
+import Footer from "./components/footer/footer";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
             <SignUp />
           </Route>
         </Switch>
+        <Footer></Footer>
       </div>
     </Router>
   );
