@@ -13,9 +13,7 @@ function App() {
           <NavBar />
         </nav>
         <Switch>
-          <Route path="/signup">
-            <SignUp />
-          </Route>
+          <Route path="/signup" component={SignUp} />
         </Switch>
         <Footer></Footer>
       </div>

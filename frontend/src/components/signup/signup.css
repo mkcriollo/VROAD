@@ -73,6 +73,7 @@ p {
   padding: 10px;
   color: #fff;
   border: none;
+  outline: none;
 }
 
 .goal-input > button {
@@ -82,6 +83,7 @@ p {
   background-color: #7d88c7;
   border: none;
   color: #fff;
+  cursor: pointer;
 }
 
 /* info page css */

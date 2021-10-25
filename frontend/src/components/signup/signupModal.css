@@ -1,0 +1,103 @@
+.main-modal-holder {
+  display: block;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  width: 850px;
+  background-color: #fff;
+  z-index: 3;
+  display: flex;
+  box-shadow: 0 3px 7px rgb(0 0 0 / 30%);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.modal-icon-holder {
+  width: 30%;
+  height: 100%;
+  background-color: #7d88c7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+
+.modal-title-holder > h2 {
+  font-size: 14px;
+  color: gainsboro;
+  font-family: "Archivo", sans-serif;
+}
+
+.modal-title-holder > p {
+  font-weight: 800;
+  color: #333;
+  font-family: "Archivo", sans-serif;
+}
+
+.modal-icon {
+  background-image: url("../../assests/modal-icon.png");
+  background-size: cover;
+  width: 100%;
+  height: 185px;
+  margin-bottom: 25px;
+}
+
+.signup-info {
+  width: 70%;
+  height: 100%;
+  padding: 30px 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-info > input {
+  width: 70%;
+  height: 20px;
+  margin-top: 20px;
+  padding: 15px 5px;
+  box-sizing: border-box;
+  border: #f2f2f2 1px thin;
+}
+
+.signup-info > h2 {
+  font-family: "Archivo", sans-serif;
+}
+
+.signup-info > button {
+  width: 70%;
+  background-color: gold;
+  color: #fff;
+  border: none;
+  margin-top: 15px;
+  height: fit-content;
+  padding: 15px 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.signup-info > p {
+  color: gold;
+  font-family: "Archivo", sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+.modal-pic-holder {
+  height: 55%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal-pic-holder > p {
+  color: #f2f2f2;
+  font-size: 10px;
+  font-family: "Archivo", sans-serif;
+}

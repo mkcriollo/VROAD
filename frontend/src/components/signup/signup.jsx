@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import SignupModal from "./signupModal";
 import "./signup.css";
 
 let slideIndex = 0;
@@ -24,6 +25,7 @@ const Signup = () => {
   return (
     <>
       <div className="full-page-su">
+        <SignupModal></SignupModal>
         <div className="top-su">
           <h2>YOUR DOSE OF PRODUCTIVITY</h2>
           <p>PLAN YOUR GOALS, PLAN YOUR LIFE, PLAN YOUR VROAD</p>
