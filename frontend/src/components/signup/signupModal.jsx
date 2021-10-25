@@ -17,8 +17,8 @@ const SignupModal = (props) => {
       <div className="signup-info">
         <h2>Create Account</h2>
         <input type="text" placeholder="Name" />
-        <input type="text" placeholder="Password" />
-        <input type="text" placeholder="Confirm Password" />
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Confirm Password" />
         <br />
         <button>Sign Up</button>
         <p>Already have an account?</p>
