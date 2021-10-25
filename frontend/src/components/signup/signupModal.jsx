@@ -1,6 +1,19 @@
 import React from "react";
 import "./signupModal.css";
 
+function showPassword() {
+  let pass = document.getElementsByClassName("enterPassword");
+  console.log(pass);
+
+  for (let password of pass) {
+    if (password.type === "password") {
+      password.type = "text";
+    } else {
+      password.type = "password";
+    }
+  }
+}
+
 const SignupModal = (props) => {
   return (
     <div className="main-modal-holder">
@@ -17,9 +30,20 @@ const SignupModal = (props) => {
       <div className="signup-info">
         <h2>Create Account</h2>
         <input type="text" placeholder="Name" />
-        <input type="password" placeholder="Password" />
-        <input type="password" placeholder="Confirm Password" />
-        <br />
+        <input
+          type="password"
+          placeholder="Password"
+          className="enterPassword"
+        />
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          className="enterPassword"
+        />
+        <div className="show-pass-hold">
+          <input type="checkbox" onClick={() => showPassword()} />
+          <p>Show Password</p>
+        </div>
         <button>Sign Up</button>
         <p>Already have an account?</p>
       </div>
