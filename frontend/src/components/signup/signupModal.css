@@ -1,7 +1,8 @@
 .main-modal-holder {
-  display: block;
+  display: flex;
+  visibility: hidden;
   position: absolute;
-  top: 35%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 500px;

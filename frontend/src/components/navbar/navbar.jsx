@@ -3,7 +3,7 @@ import "./navbar.css";
 
 let counter = 0;
 let changeWord = document.getElementById("change-words");
-console.log(changeWord);
+
 let words = ["LIFE", "PLANS", "VROAD"];
 
 setInterval(change, 1000);
@@ -19,7 +19,7 @@ function change() {
   }
 }
 
-const NavBar = () => {
+const NavBar = ({ toggleModal }) => {
   // this nav bar return is if there is no user login
   return (
     <div className="full-navbar">
@@ -31,7 +31,9 @@ const NavBar = () => {
         </div>
       </div>
       <h2>VROAD</h2>
-      <button className="login-btn">CREATE YOUR VROAD</button>
+      <button className="login-btn" onClick={toggleModal}>
+        CREATE YOUR VROAD
+      </button>
     </div>
   );
   // we will create another nav bar for when a user is login
