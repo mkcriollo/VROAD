@@ -38,7 +38,7 @@
 }
 
 .modal-icon {
-  background-image: url("../../assests/modal-icon.png");
+  /* background-image: url("../../assests/modal-icon.png"); */
   background-size: cover;
   width: 100%;
   height: 185px;

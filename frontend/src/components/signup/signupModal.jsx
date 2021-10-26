@@ -1,5 +1,8 @@
 import React from "react";
+import { useState } from "react";
 import "./signupModal.css";
+import signUpPic from "../../assests/modal-icon.png";
+import welcomePic from "../../assests/welcome-back.png";
 
 function showPassword() {
   let pass = document.getElementsByClassName("enterPassword");
@@ -15,6 +18,8 @@ function showPassword() {
 }
 
 const SignupModal = (props) => {
+  const [login, setLogin] = useState(false);
+
   return (
     <div className="main-modal-holder">
       <div className="modal-icon-holder">
@@ -23,12 +28,15 @@ const SignupModal = (props) => {
           <p>Discover new ways to be organize, teach others your Success.</p>
         </div>
         <div className="modal-pic-holder">
-          <div className="modal-icon"></div>
+          <img
+            className="modal-icon"
+            src={login === true ? welcomePic : signUpPic}
+          ></img>
           <p>Art By Leadership</p>
         </div>
       </div>
       <div className="signup-info">
-        <h2>Create Account</h2>
+        <h2>{login === true ? "Welcome Back" : "Create Account"}</h2>
         <input type="text" placeholder="Name" />
         <input
           type="password"
@@ -36,6 +44,7 @@ const SignupModal = (props) => {
           className="enterPassword"
         />
         <input
+          style={login === true ? { display: "none" } : { display: "block" }}
           type="password"
           placeholder="Confirm Password"
           className="enterPassword"
@@ -44,8 +53,10 @@ const SignupModal = (props) => {
           <input type="checkbox" onClick={() => showPassword()} />
           <p>Show Password</p>
         </div>
-        <button>Sign Up</button>
-        <p>Already have an account?</p>
+        <button>{login === true ? "Login In" : "Sign Up"}</button>
+        <p onClick={() => setLogin(!login)}>
+          {login === true ? "Create an Account!" : "Already Have an Account?"}
+        </p>
       </div>
       <div className="login-info"></div>
     </div>
