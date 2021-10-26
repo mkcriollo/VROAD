@@ -8,11 +8,15 @@ import "./App.css";
 
 function toggleModal() {
   let modal = document.querySelector(".main-modal-holder");
+  let name = document.querySelector(".enterName");
+  let password = document.querySelector(".enterPassword");
 
   if (modal.style.visibility === "hidden" || modal.style.visibility === null) {
     modal.style.visibility = "visible";
   } else {
     modal.style.visibility = "hidden";
+    name.value = "";
+    password.value = "";
   }
 }
 
@@ -27,7 +31,7 @@ function App() {
           <Route path="/" component={SignUp} toggleModal={toggleModal} />
         </Switch>
         <Footer></Footer>
-        <SignupModal></SignupModal>
+        <SignupModal toggleModal={toggleModal}></SignupModal>
       </div>
     </Router>
   );

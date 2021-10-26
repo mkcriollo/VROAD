@@ -17,7 +17,7 @@ function showPassword() {
   }
 }
 
-const SignupModal = (props) => {
+const SignupModal = ({ toggleModal }) => {
   const [login, setLogin] = useState(false);
 
   return (
@@ -36,8 +36,11 @@ const SignupModal = (props) => {
         </div>
       </div>
       <div className="signup-info">
+        <div className="closing-modal-holder">
+          <i class="fas fa-times" onClick={() => toggleModal()}></i>
+        </div>
         <h2>{login === true ? "Welcome Back" : "Create Account"}</h2>
-        <input type="text" placeholder="Name" />
+        <input type="text" placeholder="Name" className="enterName" />
         <input
           type="password"
           placeholder="Password"

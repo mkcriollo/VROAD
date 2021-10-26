@@ -115,3 +115,19 @@
   color: #333;
   font-size: 14px;
 }
+
+.closing-modal-holder {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fa-times {
+  cursor: pointer;
+  color: #333;
+}
+
+.fa-times:hover {
+  color: red;
+}
