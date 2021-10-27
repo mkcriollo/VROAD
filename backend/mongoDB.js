@@ -9,8 +9,8 @@ const dbName = "vroad";
 
 MongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
   if (err) {
-    console.log("Could not connect to MongoDB");
+    "Could not connect to MongoDB");
   }
   const db = client.db(dbName);
-  console.log("Running MongoDB");
+  "Running MongoDB");
 });

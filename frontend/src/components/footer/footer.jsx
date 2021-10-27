@@ -1,4 +1,3 @@
-import react from "react";
 import "./footer.css";
 
 const Footer = (props) => {
@@ -9,20 +8,25 @@ const Footer = (props) => {
           <a
             href="https://www.linkedin.com/in/mike-criollo-b38377206/"
             target="_blank"
+            rel="noreferrer"
           >
-            <i class="fab fa-linkedin"></i>
+            <i className="fab fa-linkedin"></i>
           </a>
-          <a href="https://github.com/mkcriollo" target="_blank">
-            <i class="fab fa-github"></i>
+          <a
+            href="https://github.com/mkcriollo"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fab fa-github"></i>
           </a>
-          <a href="http://mikecriollo.com/" target="_blank">
-            <i class="far fa-user-circle"></i>
+          <a href="http://mikecriollo.com/" target="_blank" rel="noreferrer">
+            <i className="far fa-user-circle"></i>
           </a>
         </div>
         <p>GET IN TOUCH</p>
         <p>IM ALL OVER THE WEB</p>
         <div className="made-by">
-          <i class="far fa-copyright"></i>
+          <i className="far fa-copyright"></i>
           <p>2021 MIKE CRIOLLO</p>
         </div>
       </div>

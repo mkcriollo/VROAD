@@ -3,7 +3,7 @@ import SignUp from "./components/signup/signup";
 import NavBar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import SignupModal from "./components/signup/signupModal";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 
 function toggleModal() {

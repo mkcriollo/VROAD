@@ -56,7 +56,7 @@
   align-items: center;
 }
 
-.signup-info > input {
+.signup-info-form > input {
   width: 70%;
   height: 20px;
   margin-top: 20px;
@@ -65,11 +65,19 @@
   border: #f2f2f2 1px thin;
 }
 
-.signup-info > h2 {
+.signup-info-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-info-form > h2 {
   font-family: "Archivo", sans-serif;
 }
 
-.signup-info > button {
+#submit-userInfo {
   width: 70%;
   background-color: gold;
   color: #fff;

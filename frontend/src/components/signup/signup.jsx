@@ -1,6 +1,5 @@
 import React from "react";
 import { useEffect } from "react";
-import SignupModal from "./signupModal";
 import "./signup.css";
 
 let slideIndex = 0;
@@ -8,7 +7,6 @@ let slideIndex = 0;
 
 function showSlides() {
   const slides = document.getElementsByClassName("mySlides");
-  console.log(slides);
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
@@ -98,7 +96,7 @@ const Signup = ({ toggleModal }) => {
         <div className="feature-holder">
           <div className="feature-left">
             <div className="FL-upper">
-              <i class="fas fa-bullseye"></i>
+              <i className="fas fa-bullseye"></i>
               <h2>SET ALL YOUR GOALS</h2>
               <p>
                 JOT DOWN SHORT TERMS OR LONG TERM GOALS, THE GOAL IS TO ACHIEVE
@@ -106,7 +104,7 @@ const Signup = ({ toggleModal }) => {
               </p>
             </div>
             <div className="FL-bottom">
-              <i class="fas fa-project-diagram"></i>
+              <i className="fas fa-project-diagram"></i>
               <h2>TRACK ALL PROJECTS</h2>
               <p>
                 KEEP TRACK OF THE STATUS OF YOUR CURRENT PROJECTS, TAKE NOTES
@@ -116,7 +114,7 @@ const Signup = ({ toggleModal }) => {
           </div>
           <div className="feature-mid">
             <div className="FM-upper">
-              <i class="fas fa-book"></i>
+              <i className="fas fa-book"></i>
               <h2>WRITE YOUR STORIES</h2>
               <p>
                 JUST LIKE BOOKS EVERY PART OF YOUR LIFE HAS CHAPTERS, WHEN
@@ -124,7 +122,7 @@ const Signup = ({ toggleModal }) => {
               </p>
             </div>
             <div className="FM-bottom">
-              <i class="fas fa-tasks"></i>
+              <i className="fas fa-tasks"></i>
               <h2>COMPLETE TASKS</h2>
               <p>
                 JOT DOWN TASK DAILY, MONTHLY,YEARLY. MARK COMPLETE WHEN
@@ -134,12 +132,12 @@ const Signup = ({ toggleModal }) => {
           </div>
           <div className="feature-right">
             <div className="FR-upper">
-              <i class="fas fa-link"></i>
+              <i className="fas fa-link"></i>
               <h2>YOUR LINKS IN ONE PLACE</h2>
               <p>ONE PLACE TO NAVIGATE TO EVERYTHING ABOUT YOU.</p>
             </div>
             <div className="FR-bottom">
-              <i class="far fa-address-card"></i>
+              <i className="far fa-address-card"></i>
               <h2>SHARE YOUR HABITS</h2>
               <p>
                 INSPIRE OTHERS TO FOLLOW YOUR HABITS. DISCOVER NEW METHODS THAT
