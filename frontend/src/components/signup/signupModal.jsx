@@ -51,6 +51,7 @@ const SignupModal = ({ toggleModal }) => {
           type="password"
           placeholder="Confirm Password"
           className="enterPassword"
+          id="confirmPassword"
         />
         <div className="show-pass-hold">
           <input type="checkbox" onClick={() => showPassword()} />

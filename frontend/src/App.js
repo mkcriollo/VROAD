@@ -10,6 +10,7 @@ function toggleModal() {
   let modal = document.querySelector(".main-modal-holder");
   let name = document.querySelector(".enterName");
   let password = document.querySelector(".enterPassword");
+  let confirmPass = document.getElementById("confirmPassword");
 
   if (modal.style.visibility === "hidden" || modal.style.visibility === null) {
     modal.style.visibility = "visible";
@@ -17,6 +18,7 @@ function toggleModal() {
     modal.style.visibility = "hidden";
     name.value = "";
     password.value = "";
+    confirmPass.value = "";
   }
 }
 
@@ -28,7 +30,10 @@ function App() {
           <NavBar toggleModal={toggleModal} />
         </nav>
         <Switch>
-          <Route path="/" component={SignUp} toggleModal={toggleModal} />
+          <Route
+            path="/"
+            component={() => <SignUp toggleModal={toggleModal} />}
+          />
         </Switch>
         <Footer></Footer>
         <SignupModal toggleModal={toggleModal}></SignupModal>

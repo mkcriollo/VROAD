@@ -18,7 +18,7 @@ function showSlides() {
   setTimeout(showSlides, 4000);
 }
 
-const Signup = () => {
+const Signup = ({ toggleModal }) => {
   useEffect(() => {
     showSlides();
   }, []);
@@ -28,10 +28,10 @@ const Signup = () => {
         {/* <SignupModal></SignupModal> */}
         <div className="top-su">
           <h2>YOUR DOSE OF PRODUCTIVITY</h2>
-          <p>PLAN YOUR GOALS, PLAN YOUR LIFE, PLAN YOUR VROAD</p>
+          <p>PLAN YOUR GOALS | PLAN YOUR LIFE | PLAN YOUR VROAD</p>
           <div className="goal-input">
             <input type="text" name="" id="" placeholder="TODAY I WILL.." />
-            <button>GO</button>
+            <button onClick={() => toggleModal()}>GO</button>
           </div>
         </div>
         <div className="bottom-su"></div>
