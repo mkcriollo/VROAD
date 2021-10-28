@@ -29,9 +29,6 @@ function submitUserForm() {
   // } else {
   //   alert("Password doesn't match");
   // }
-
-  console.log(name);
-  console.log(password);
 }
 
 const SignupModal = ({ toggleModal }) => {
